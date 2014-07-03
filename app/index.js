@@ -11,7 +11,7 @@ var SasatSiteBaseProvider = yeoman.generators.Base.extend({
 
     this.on('end', function () {
       if (!this.options['skip-install']) {
-        this.installDependencies();
+        // this.installDependencies();
       }
     });
   },
@@ -22,9 +22,15 @@ var SasatSiteBaseProvider = yeoman.generators.Base.extend({
     var prompts = [{
       name: 'siteName',
       message: 'サイト名を入力してください: '
+    }, {
+      type: 'confirm',
+      name: 'usePlayGround',
+      message: 'PlayGroudページを作成しますか？',
+      default: false
     }];
     this.prompt(prompts, function (props) {
       this.name = props.siteName;
+      this.usePlayGround = props.usePlayGround;
       done();
     }.bind(this));
   },
@@ -35,6 +41,9 @@ var SasatSiteBaseProvider = yeoman.generators.Base.extend({
     this.template('base.html', 'index.html', data);
     this.copy('_package.json', 'package.json');
     this.copy('_Gruntfile.js', 'Gruntfile.js');
+    if(this.usePlayGround) {
+      this.copy('_playground.html', 'playground.html');
+    }
   }
 });
 

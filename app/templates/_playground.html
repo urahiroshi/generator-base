@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta content="text/html" charset="UTF-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <title>
+      <%= name =%>
+    </title>
+  </head>
+  <body>
+    <p class="playP">
+      これはpタグ内の文章です<br>
+      <a href="#">リンクです</a>
+    </p>
+    <div class="playDiv">
+      これはdivタグ内の文章です<br>
+      <span>spanタグ内の文章です</span>
+    </div>
+    <ul class="playUl">
+      <li>箇条書き１</li>
+      <li>箇条書き２</li>
+      <li>箇条書き３</li>
+    </ul>
+    <table class="playTable">
+      <tr>
+        <th>ヘッダ行１</th>
+        <th>ヘッダ行２</th>
+        <th>ヘッダ行３</th>
+      </tr>
+      <tr>
+        <td>行１列１</td>
+        <td>行１列２</td>
+        <td>行１列３</td>
+      </tr>
+      <tr>
+        <td>行２列１</td>
+        <td>行２列２</td>
+        <td>行２列３</td>
+      </tr>
+    </table>
+    <hr>
+    <form class="playForm">
+      フォームの文章です<br>
+      <input type="text" name="formName" value="" class="playText" size="40" /><br>
+      <select name="formSelect" class="playSelect">
+        <option value="value1">select1</option>
+        <option value="value2">select2</option>
+        <option value="value3">select3</option>
+      </select><br>
+      <select name="formList" class="playList" size="3" multiple>
+        <option value="value1">select1</option>
+        <option value="value2">select2</option>
+        <option value="value3">select3</option>
+      </select><br>
+      <input type="radio" name="formRadio" value="radio1" />ラジオボタン１<br>
+      <input type="radio" name="formRadio" value="radio2" />ラジオボタン２<br>
+      <input type="radio" name="formRadio" value="radio3" />ラジオボタン３<br>
+      <input type="checkbox" name="formCheck1" value="check1" />チェックボックス１<br>
+      <input type="checkbox" name="formCheck2" value="check2" />チェックボックス２<br>
+      <textarea name="formTextArea" cols="80" rows="4"></textarea><br>
+      <input type="button" name="formButton" value="ただのボタン" /><br>
+      <input type="submit" value="送信ボタン" />
+    </form>
+    <hr>
+  </body>
+</html>
